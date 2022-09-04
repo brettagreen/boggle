@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Boggle{% endblock %}
+{% block content %}
+
+
+<div id="info">
+    <!--# games played goes here-->
+    <h3>Games played: <span id="games_played">{{session['games_played']}}</span></h3>
+
+    <!--high score goes here-->
+    <h3>High score: <span id="high_score">{{session['score']}}</span></h3>
+
+    <!--score goes here-->
+    <h3>Current Score: <span id="score">0</span></h3>
+
+    <!--result from previous guess goes here (h3 tags)-->
+    <h3 id="result_text"></h3>
+
+</div>
+
+<button id="begin">start game</button>
+
+<!--game over msg-->
+<h2 id="gameover">Game Over!</h2>
+
+<table id="board">
+    {% for x in session['game'] %}
+    <tr>
+    {% for y in x %}
+    <td>{{y}}</td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+<div id="gameform">
+    <h3>Choose a word:</h3>
+    <form>
+        <input type="text" id="form_word" name="word">
+        <button disabled id="submit_word" type="submit">submit</button>
+    </form>
+    <br />
+
+</div>
+
+{% endblock %}

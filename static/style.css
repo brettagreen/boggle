@@ -1,0 +1,61 @@
+/*cobbled together css!
+table td {
+    width: 80px;
+    height: 80px;
+    border: solid 1px #666;
+  }
+*/
+#board {
+    position: absolute; 
+    margin-top:25%;
+    left: 0; 
+    right: 0; 
+    margin-left: 28%; 
+    margin-right: auto; 
+    height: 25%;
+    width: 30%; /* Need a specific value to work */
+  }
+
+  td {
+    cursor: pointer;
+    border: 1px;
+    margin: 1px;
+  }
+  
+  body {
+    background-color:lightgray;
+  }
+
+  #gameover {
+    margin-left:25%;
+    margin-right:25%;
+    display: none;
+    float: left;
+    color:maroon;
+    font-weight:bold;
+  }
+
+  #info {
+    display:block;
+    float: left;
+  }
+
+  #gameform {
+    display:block;
+    float:left;
+    clear:left;
+  }
+
+  select {
+    display:inline;
+  }
+
+#dimensions {
+  float: left;
+  clear: left;
+}
+
+#begin {
+  float: left;
+  clear: left;
+}
