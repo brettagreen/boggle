@@ -63,4 +63,4 @@ def stats():
 def clear():
     """clears duplicate list so that it is fresh for the next game. redirect to / i.e. form.html"""
     dupes.clear()
-    return redirect('/')
+    return "I shat a quart of whiskey in a bottle!"
